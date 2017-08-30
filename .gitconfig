@@ -1,0 +1,16 @@
+[user]
+	name = Peter T Bosse II
+	email = ptb@ioutime.com
+	signingkey = 9C999C32EAC4AF21
+[alias]
+	cm = commit --allow-empty-message --message=
+	co = checkout
+	st = status
+[push]
+	default = simple
+[gpg]
+	program = /usr/local/bin/gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true

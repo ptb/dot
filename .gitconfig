@@ -5,6 +5,7 @@
 [alias]
 	cm = commit --allow-empty-message --message=
 	co = checkout
+	rp = "! a () { git reflog expire --expire=now --all && git gc --prune=now && git gc --aggressive --prune=now && git repack -a; }; a"
 	st = status
 [push]
 	default = simple
@@ -18,7 +19,6 @@
 	excludesfile = /Users/ptb/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

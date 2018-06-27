@@ -5,6 +5,7 @@
 [alias]
 	cm = commit --allow-empty-message --message=
 	co = checkout
+	lg = log --show-signature
 	rp = "! a () { git reflog expire --expire=now --all && git gc --prune=now && git gc --aggressive --prune=now && git repack -a; }; a"
 	st = status
 [push]
@@ -16,7 +17,7 @@
 [tag]
 	gpgsign = true
 [core]
-	excludesfile = /Users/ptb/.gitignore_global
+	excludesfile = /Users/ptb/Dropbox/.dot.git/info/exclude
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
